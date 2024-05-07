@@ -13,5 +13,10 @@ export class LabsComponent {
     'Instalar el angular CLI',
     'Crear proyecto',
     'Crear componentes'
-  ]
+  ];
+  img = 'https://urgenciesveterinaries.com/wp-content/uploads/2023/09/survet-gato-caida-pelo-01.jpeg';
+
+  clickHandler(){
+    alert("Hola");
+  }
 }

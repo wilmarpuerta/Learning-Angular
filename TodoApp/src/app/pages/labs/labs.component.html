@@ -1,10 +1,19 @@
-<h1>Este es mi primer proyecto</h1>
-<h2>{{ welcome}}</h2>
-
-<ul>
-  @for (task of tasks; track $index) {
-    <li>
-      {{ task }}
-    </li>
-  }
-</ul>
+<div class="container">
+    <h1>Este es mi primer proyecto</h1>
+    <h2>{{ welcome}}</h2>
+    
+    <ul>
+      @for (task of tasks; track $index) {
+        <li>
+          {{ task }}
+        </li>
+      }
+    </ul>
+    <hr>
+    
+    <img [src]="img" alt=""><br> <!-- Property Binding  -->
+    
+    <!-- Event Binding: click y doble click -->
+    <button (click)="clickHandler()">Click me</button><br>
+    <button (dblclick)="clickHandler()">Double me</button>
+</div>
