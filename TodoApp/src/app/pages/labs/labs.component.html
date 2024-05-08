@@ -16,4 +16,10 @@
     <!-- Event Binding: click y doble click -->
     <button (click)="clickHandler()">Click me</button><br>
     <button (dblclick)="clickHandler()">Double me</button>
+    <p>(change)</p>
+    <input type="text" [value]="welcome" (change)="changeHandler($event)">
+    <p>(keydown)</p>
+    <input type="text" [value]="welcome" (keydown)="keydownHandler($event)">
+    <p>(keydown + shift t)</p>
+    <input type="text" [value]="welcome" (keydown.shift.t)="clickHandler()">
 </div>
