@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-labs',
@@ -29,5 +29,14 @@ export class LabsComponent {
   {
     const input = event.target as HTMLInputElement;
     console.log(input.value);
+  }
+  // Signal
+  string = signal('Hello word');
+
+  keydownSignalHandler(event: KeyboardEvent)
+  {
+    const input = event.target as HTMLInputElement;
+    const newValue = input.value;
+    this.string.set(newValue);
   }
 }

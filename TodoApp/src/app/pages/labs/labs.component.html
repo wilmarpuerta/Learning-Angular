@@ -22,4 +22,6 @@
     <input type="text" [value]="welcome" (keydown)="keydownHandler($event)">
     <p>(keydown + shift t)</p>
     <input type="text" [value]="welcome" (keydown.shift.t)="clickHandler()">
+    <h1>Signal {{ string() }}</h1>
+    <input type="text" [value]="string()" (keydown)="keydownSignalHandler($event)">
 </div>
