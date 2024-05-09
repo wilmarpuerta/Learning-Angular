@@ -24,4 +24,10 @@
     <input type="text" [value]="welcome" (keydown.shift.t)="clickHandler()">
     <h1>Signal {{ string() }}</h1>
     <input type="text" [value]="string()" (keydown)="keydownSignalHandler($event)">
+    <p>Total : {{ Array().length }}</p>
+    <ul>
+      <li *ngFor="let array of Array(); index as i">
+        {{ i }} {{ array }}
+      </li>
+    </ul>
 </div>

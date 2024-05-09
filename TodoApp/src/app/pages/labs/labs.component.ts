@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
+import { CommonModule } from '@angular/common'; //aqui esta lo que agregué Enna
 
 @Component({
   selector: 'app-labs',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './labs.component.html',
   styleUrl: './labs.component.css'
 })
@@ -39,4 +40,10 @@ export class LabsComponent {
     const newValue = input.value;
     this.string.set(newValue);
   }
+
+  Array = signal([
+    'Instalar el angular CLI',
+    'Crear proyecto',
+    'Crear componentes'
+  ])
 }
