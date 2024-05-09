@@ -13,5 +13,12 @@ export class HomeComponent {
     'Instalar el angular CLI',
     'Crear proyecto',
     'Crear componentes'
-  ])
+  ]);
+
+  changeHandler(event: Event){
+    const input = event.target as HTMLInputElement;
+    const newTask = input.value;
+    this.tasks.update((tasks) => [...tasks, newTask]);
+    input.value = "";
+  }
 }
