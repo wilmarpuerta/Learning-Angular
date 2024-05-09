@@ -20,5 +20,10 @@ export class HomeComponent {
     const newTask = input.value;
     this.tasks.update((tasks) => [...tasks, newTask]);
     input.value = "";
-  }
+  };
+
+  deleteTask(index: number)
+  {
+    this.tasks.update((tasks) => tasks.filter((task, position) => position !== index))
+  };
 }
