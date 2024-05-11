@@ -36,4 +36,14 @@
     <div *ngIf="string() == 'Hello word'">
       <p>My container2</p>
     </div>
+    <input type="number" [value]="person().age" (change)="changeAge($event)">
+    <div *ngIf="person().name == 'wilmar'">
+      <p>Hola yo me llamo wilmar</p>
+      <p *ngIf="person().age >= 18; else elseBlock">
+        Y soy mayor de edad
+      </p>
+      <ng-template #elseBlock>
+        Y no soy mayor de edad
+      </ng-template>
+    </div>
 </div>
