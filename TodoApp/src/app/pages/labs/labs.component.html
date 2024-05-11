@@ -30,4 +30,10 @@
         {{ i }} {{ array }}
       </li>
     </ul>
+    <div *ngIf="1 !== 1">
+      <p>My container</p>
+    </div>
+    <div *ngIf="string() == 'Hello word'">
+      <p>My container2</p>
+    </div>
 </div>
