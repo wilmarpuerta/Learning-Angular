@@ -46,4 +46,21 @@ export class LabsComponent {
     'Crear proyecto',
     'Crear componentes'
   ])
+
+  person = signal({
+    name: 'wilmar',
+    age: 20
+  })
+
+  changeAge(event: Event)
+  {
+    const input = event.target as HTMLInputElement;
+    const newAge = input.value;
+    this.person.update(prevStatus => {
+      return {
+        ...prevStatus,
+        age: parseInt(newAge)
+      }
+    }
+  )}
 }
