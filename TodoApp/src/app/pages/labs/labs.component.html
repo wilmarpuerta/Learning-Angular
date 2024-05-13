@@ -55,4 +55,7 @@
       <p *ngSwitchCase="'miguel'">Hola miguel</p>
       <p *ngSwitchDefault>Hola desconocido</p>
     </div>
+    <!-- Form reactivo --> <br>
+    <input type="color" [formControl]="colorCrl">
+    <p> Color: {{ colorCrl.value }} </p>
 </div>
