@@ -46,4 +46,13 @@
         Y no soy mayor de edad
       </ng-template>
     </div>
+    <br>
+    <input type="text" [value]="person().name" (change)="changeName($event)">
+    <div [ngSwitch]="person().name">
+      <p *ngSwitchCase="'wilmar'">Hola wilmar</p>
+      <p *ngSwitchCase="'pablo'">Hola pablo</p>
+      <p *ngSwitchCase="'camilo'">Hola camilo</p>
+      <p *ngSwitchCase="'miguel'">Hola miguel</p>
+      <p *ngSwitchDefault>Hola desconocido</p>
+    </div>
 </div>
