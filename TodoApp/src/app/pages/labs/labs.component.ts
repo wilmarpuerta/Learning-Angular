@@ -63,4 +63,16 @@ export class LabsComponent {
       }
     }
   )}
+
+  changeName(event: Event)
+  {
+    const input = event.target as HTMLInputElement;
+    const newName = input.value;
+    this.person.update(prevStatus => {
+      return {
+        ...prevStatus,
+        name: newName
+      }
+    }
+  )}
 }
