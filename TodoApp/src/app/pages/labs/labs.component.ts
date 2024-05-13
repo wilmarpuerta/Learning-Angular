@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
-import { CommonModule } from '@angular/common'; //aqui esta lo que agregué Enna
+import { CommonModule } from '@angular/common';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-labs',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './labs.component.html',
   styleUrl: './labs.component.css'
 })
@@ -75,4 +76,13 @@ export class LabsComponent {
       }
     }
   )}
+
+  // Form reactivo
+  colorCrl = new FormControl();
+
+  constructor(){
+    this.colorCrl.valueChanges.subscribe(value => {
+      console.log(value);
+    });
+  }
 }
