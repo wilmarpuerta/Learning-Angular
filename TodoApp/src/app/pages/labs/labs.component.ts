@@ -79,6 +79,9 @@ export class LabsComponent {
 
   // Form reactivo
   colorCrl = new FormControl();
+  widthCrl = new FormControl(50, {
+    nonNullable: true
+  })
 
   constructor(){
     this.colorCrl.valueChanges.subscribe(value => {
