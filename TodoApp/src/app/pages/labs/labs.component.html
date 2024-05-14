@@ -58,4 +58,10 @@
     <!-- Form reactivo --> <br>
     <input type="color" [formControl]="colorCrl">
     <p> Color: {{ colorCrl.value }} </p>
+    <svg>
+      <g>
+        <rect x="0" y="0" height="100" width="100" [attr.fill]="colorCrl.value">
+        </rect>
+      </g>
+    </svg>
 </div>
