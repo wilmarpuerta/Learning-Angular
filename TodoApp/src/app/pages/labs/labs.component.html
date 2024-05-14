@@ -64,4 +64,10 @@
         </rect>
       </g>
     </svg>
+    <br>
+    <input type="number" [formControl]="widthCrl">
+    <span class="box" [style.width.px]="widthCrl.value"></span>
+    <br>
+    <label for="name"><strong>Nombre: <span class="message-error" [class.err]="nameCrl.invalid">*</span></strong></label><br>
+    <input type="text" [formControl]="nameCrl">
 </div>
