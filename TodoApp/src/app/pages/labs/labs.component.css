@@ -8,3 +8,13 @@
     display: block;
     background-color: red;
 }
+
+.message-error{
+    color: red;
+    opacity: 0;
+    transition: all linear .5s;
+}
+
+.message-error.err{
+    opacity: 1;
+}
